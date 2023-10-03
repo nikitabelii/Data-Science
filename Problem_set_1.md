@@ -31,7 +31,7 @@ def montage_plot(x):
     x = np.pad(x, pad_width=((0, 0), (1, 1), (1, 1)), mode='constant', constant_values=0)
     plot(montage(x))
 
-# #MNIST
+#MNIST
 train_set = datasets.MNIST('./data', train=True, download=True)
 test_set = datasets.MNIST('./data', train=False, download=True)
 
