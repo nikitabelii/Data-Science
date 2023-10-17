@@ -1,3 +1,4 @@
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 import base64
@@ -6,7 +7,7 @@ from scipy.signal import convolve2d
 from skimage import data, color, io
 import IPython
 
-import numpy as np
+import numpy np
 import matplotlib.pyplot as plt
 import torch
 from torchvision import datasets
@@ -30,9 +31,11 @@ image = io.imread("https://th.bing.com/th/id/OIP.HLuY60jzx5puuKjbqmWRRwHaEK?pid=
 
 plot(image)
 
-#Resize the image to 224x224
+image.shape
 
-#(it didn't show the image with np.resize, so I used cv2)
+# Resize the image to 224x224
+
+# (it didn't show the image with np.resize, so I used cv2)
 
 import cv2
 
@@ -47,20 +50,22 @@ resized_image = cv2.resize(image, new_size)
 
 # Save the resized image
 cv2.imwrite('output_image.jpg', resized_image)
+image = resized_image
 
+image.shape
 
 plot(resized_image)
 
-#Show a grayscale copy
+# Show a grayscale copy
 
-image = resized_image
 image = image[:,:,0]
 image = image.astype(float)
 image /= 255.0
 plot(image)
 
-#Convolve with 10 random filters and show filters and features maps for each
+image.shape
 
+# Convolve with 10 random filters and show filters and features maps for each
 
 a = np.matrix([[1,2,1],[0,0,0],[-1,-2,-1]])
 
@@ -131,7 +136,7 @@ a
 
 for i in range(10):
     a = 2*np.random.random((3,3))-1
-    print(a)
+    plot(a)
     z=conv2(x,a)
     plot(z)
-
+v
